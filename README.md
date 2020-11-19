@@ -5,3 +5,10 @@
 
 - A data structure is the implementation for an ADT. In an object-oriented language like Java, an ADT and its implementation together make up a class. Each operation associated with the ADT is implemented by a member, function or method.
 - The variables that define the space required by a data item are referred to as data members. An object is an instance of a class, that is, something that is created and takes up storage during the execution of a computer program.
+
+## Need for Data Structure
+As applications are getting complex and data rich, there are three common problems that applications face now-a-days.
+
+* Data Search  
+* Processor speed 
+* Multiple requests
