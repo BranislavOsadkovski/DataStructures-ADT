@@ -9,6 +9,6 @@
 ## Need for Data Structure
 As applications are getting complex and data rich, there are three common problems that applications face now-a-days.
 
-* Data Search  
-* Processor speed 
-* Multiple requests
+* **Data Search**
+* **Processor speed** 
+* **Multiple requests**
