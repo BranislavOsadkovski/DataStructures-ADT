@@ -3,12 +3,10 @@ package structures;
 import interfaces.Bag;
 import nodes.Node;
 
-//Custom Implementation
 @SuppressWarnings({"rawtypes", "unchecked"})
-public class CustomBagStructure<T> implements Bag<T>{
+public class  BagStructure<T> implements Bag<T>{
     Node head;
     public void insert(T data) {
-
 
         Node node = new Node();
         node.setData(data);

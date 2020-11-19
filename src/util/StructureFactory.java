@@ -1,6 +1,6 @@
-package factories;
+package util;
 
-import structures.CustomBagStructure;
+import structures.BagStructure;
 import structures.DequeStructure;
 
 import structures.QueueStructure;
@@ -18,8 +18,8 @@ public class StructureFactory {
 	public static <T> DequeStructure<T> newLinkedDeque() {
 		return new DequeStructure<>();
 	}
-	public static <T> CustomBagStructure<T> newLinkedBag() {
-		return new CustomBagStructure<>();
+	public static <T> BagStructure<T> newLinkedBag() {
+		return new BagStructure<>();
 	}
 }
 

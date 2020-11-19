@@ -2,14 +2,15 @@ package structures;
 
 import interfaces.Stack;
 
-//Custom Implementation
+
 @SuppressWarnings({"unchecked", "CStyleArrayDeclaration", "unused"})
 public class StackStructure<T> implements Stack<T> {
-    private int size = 5;
-    Object[] stack = new Object[size];
+    private int size;
+    Object[] stack;
     int top = 0;
 
     public StackStructure() {
+        stack= new Object[1];
     }
 
     public StackStructure(int size) {
@@ -23,7 +24,15 @@ public class StackStructure<T> implements Stack<T> {
         }
         stack[top] = data;
         top++;
-    } 
+    }
+
+    public static void main(String[] args) {
+        StackStructure s = new StackStructure(1);
+        s.push(1);
+        s.push(2);
+        s.push(3);
+        s.show();
+    }
     private void expand() {
         int length = size();
         Object newStack[] = new Object[size * 2];

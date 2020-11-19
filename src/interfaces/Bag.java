@@ -2,9 +2,9 @@ package interfaces;
 
 public interface Bag<T> {
 
-    public void insert(T data) ;
-    public void remove(int index);
-    public void insertAt(int index, T data);
-    public void show();
-    public void insertAtStart(T data) ;
+      void insert(T data) ;
+      void remove(int index);
+      void insertAt(int index, T data);
+      void show();
+      void insertAtStart(T data) ;
 }
