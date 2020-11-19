@@ -25,7 +25,6 @@ public class StackStructure<T> implements Stack<T> {
         top++;
     }
 
-    @SuppressWarnings("CStyleArrayDeclaration")
     private void expand() {
         int length = size();
         Object newStack[] = new Object[size * 2];
