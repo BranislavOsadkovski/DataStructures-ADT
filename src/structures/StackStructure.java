@@ -23,8 +23,7 @@ public class StackStructure<T> implements Stack<T> {
         }
         stack[top] = data;
         top++;
-    }
-
+    } 
     private void expand() {
         int length = size();
         Object newStack[] = new Object[size * 2];
