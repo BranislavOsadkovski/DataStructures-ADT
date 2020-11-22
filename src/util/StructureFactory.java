@@ -1,25 +1,25 @@
 package util;
 
-import structures.BagStructure;
-import structures.DequeStructure;
+import ArrayedStructures.ArrayedBag;
+import ArrayedStructures.ArrayedDeque;
+import ArrayedStructures.ArrayedQueue;
+import ArrayedStructures.ArrayedStack;
 
-import structures.QueueStructure;
-import structures.StackStructure;
 
 
 public class StructureFactory {
 
-	public static <T> StackStructure<T> newLinkedStack() {
-		return new StackStructure<>();
+	public static <T> ArrayedStack<T> newLinkedStack() {
+		return new ArrayedStack<>();
 	}
-	public static <T> QueueStructure<T> newLinkedQueue() {
-		return new QueueStructure<>();
+	public static <T> ArrayedQueue<T> newLinkedQueue() {
+		return new ArrayedQueue<>();
 	}
-	public static <T> DequeStructure<T> newLinkedDeque() {
-		return new DequeStructure<>();
+	public static <T> ArrayedDeque<T> newLinkedDeque() {
+		return new ArrayedDeque<>();
 	}
-	public static <T> BagStructure<T> newLinkedBag() {
-		return new BagStructure<>();
+	public static <T> ArrayedBag<T> newLinkedBag() {
+		return new ArrayedBag<>();
 	}
 }
 

@@ -1,4 +1,4 @@
-package factories;
+package util;
 
 /*
  * An IterableStructure is a structure that can be iterated

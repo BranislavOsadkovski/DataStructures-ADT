@@ -1,10 +1,9 @@
-package structures;
+package LinkedStructures;
 
-import interfaces.Bag;
+
 import nodes.Node;
 
-@SuppressWarnings({"rawtypes", "unchecked"})
-public class  BagStructure<T> implements Bag<T>{
+public class LinkedStructure<T>{
     Node head;
     public void insert(T data) {
 
@@ -72,4 +71,7 @@ public class  BagStructure<T> implements Bag<T>{
         head = node;
     }
 
+    public int size() {
+        return 0;
+    }
 }
