@@ -9,16 +9,16 @@ import ArrayedStructures.ArrayedStack;
 
 public class StructureFactory {
 
-	public static <T> ArrayedStack<T> newLinkedStack() {
+	public static <T> ArrayedStack<T> newArrayedStack() {
 		return new ArrayedStack<>();
 	}
-	public static <T> ArrayedQueue<T> newLinkedQueue() {
+	public static <T> ArrayedQueue<T> newArrayedQueue() {
 		return new ArrayedQueue<>();
 	}
-	public static <T> ArrayedDeque<T> newLinkedDeque() {
+	public static <T> ArrayedDeque<T> newArrayedDeque() {
 		return new ArrayedDeque<>();
 	}
-	public static <T> ArrayedBag<T> newLinkedBag() {
+	public static <T> ArrayedBag<T> newArrayedBag() {
 		return new ArrayedBag<>();
 	}
 }
