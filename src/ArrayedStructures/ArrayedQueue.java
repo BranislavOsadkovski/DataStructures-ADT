@@ -10,7 +10,7 @@ import util.StructureIterator;
 import java.util.List;
 
 @SuppressWarnings({"unchecked", "unused"})
-public class ArrayedQueue<T> implements Queue<T>, DataStructure, ArrayedStructure {
+public class ArrayedQueue<T> implements Queue<T>, DataStructure, ArrayedStructure<T> {
 
 
     private static final int capacity = 5;
@@ -70,17 +70,20 @@ public class ArrayedQueue<T> implements Queue<T>, DataStructure, ArrayedStructur
             queue[rear] = data;
             rear = (rear + 1) % 5;
             size = size + 1;
+        }else{
+            throw new RuntimeException("ArrayedQueue is full!");
         }
     }
     public T deQueue(){
-        if(!isEmpty()) {
+        if(isEmpty()) {
+           throw new RuntimeException("ArrayedQueue is empty!");
+        }else{
             T data = queue[front];
             front = (front + 1) % 5;
             size = size - 1;
 
             return data;
         }
-        return null;
     }
 
 

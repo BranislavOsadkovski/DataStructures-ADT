@@ -9,7 +9,7 @@ import java.util.List;
 
 
 @SuppressWarnings({"unchecked", "CStyleArrayDeclaration", "unused"})
-public class ArrayedStack<T> implements Stack<T>, DataStructure, ArrayedStructure {
+public class ArrayedStack<T> implements Stack<T>, DataStructure, ArrayedStructure<T> {
     private int size;
     T[] stack;
     int top = 0;
@@ -65,17 +65,15 @@ public class ArrayedStack<T> implements Stack<T>, DataStructure, ArrayedStructur
     }
 
     public T pop() {
-        T data = null;
-
         if (isEmpty()) {
-            System.out.println("Stack is empty");
+           throw new RuntimeException("ArrayedStack is empty!");
         } else {
             top--;
-            data = stack[top];
+            T data = stack[top];
             stack[top] = null;
             shrink();
+            return data;
         }
-        return data;
     }
 
     private void shrink() {

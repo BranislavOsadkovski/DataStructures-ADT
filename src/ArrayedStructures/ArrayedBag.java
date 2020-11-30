@@ -9,7 +9,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @SuppressWarnings({"unchecked", "ForLoopReplaceableByForEach"})
-public class ArrayedBag<T> implements Bag<T>, DataStructure, ArrayedStructure {
+public class ArrayedBag<T> implements Bag<T>, DataStructure, ArrayedStructure<T> {
 
     private static final int DEFAULT_CAPACITY = 25;
     private T[] bag;
@@ -25,15 +25,16 @@ public class ArrayedBag<T> implements Bag<T>, DataStructure, ArrayedStructure {
     }
 
     @Override
-    public boolean add(T data) {
-        boolean result = true;
+    public void add(T data) {
+
         if (isFull()) {
-            result = false;
+            throw new RuntimeException("ArrayedBag is full!");
+
         } else {
             bag[numberOfEntries] = data;
             numberOfEntries++;
         }
-        return result;
+
     }
 
     public boolean isFull() {
@@ -43,7 +44,7 @@ public class ArrayedBag<T> implements Bag<T>, DataStructure, ArrayedStructure {
     @Override
     public T any(int index) {
         if (isEmpty()) {
-            throw new RuntimeException("Bag is empty.");
+            throw new RuntimeException("ArrayedBag is empty.");
         } else {
             return bag[index];
         }
@@ -52,7 +53,7 @@ public class ArrayedBag<T> implements Bag<T>, DataStructure, ArrayedStructure {
     @Override
     public void remove(int index) {
         if (isEmpty()) {
-            throw new RuntimeException("Bag is Empty. No item to remove!");
+            throw new IndexOutOfBoundsException("Item not found. There are 0 items!");
         } else {
             bag[index] = null;
             numberOfEntries--;

@@ -2,7 +2,7 @@ package AbstractDataTypes;
 
 public interface Bag<T> {
 
-    boolean add(T data);
+    void add(T data);
 
     T any(int index);
 
